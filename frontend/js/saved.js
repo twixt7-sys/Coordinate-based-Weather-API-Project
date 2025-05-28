@@ -4,7 +4,7 @@ fetch('../backend/get_saved_weather.php')
 		const list = document.getElementById('weatherList');
 		data.forEach(entry => {
 			const li = document.createElement('li');
-			li.textContent = `${entry.city}: ${entry.temperature}°C on ${entry.saved_at}`;
+			li.textContent = `Lat: ${entry.latitude}, Long: ${entry.longitude}, Temp: ${entry.temperature}°C, Wind: ${entry.windspeed} km/h on ${entry.saved_at}`;
 			list.appendChild(li);
 		});
 	});

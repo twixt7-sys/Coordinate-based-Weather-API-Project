@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 include 'db.php';
 
 $data = json_decode(file_get_contents("php://input"), true);
@@ -7,15 +10,13 @@ $longitude = $data['longitude'];
 $temp = $data['temperature'];
 $wind = $data['windspeed'];
 
-// Debug: Check if values exist
 if (!$latitude || !$longitude || !$temp || !$wind) {
 	echo json_encode(["status" => "error", "message" => "Missing values"]);
 	exit;
 }
 
-// Prepare statement
 $stmt = $conn->prepare("INSERT INTO weather_data (latitude, longitude, temperature, windspeed) VALUES (?, ?, ?, ?)");
-$stmt->bind_param("dddd", $latitude, $longitude, $temp, $wind);
+$stmt->bind_param("ddss", $latitude, $longitude, $temp, $wind);
 
 if ($stmt->execute()) {
 	echo json_encode(["status" => "saved"]);
