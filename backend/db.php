@@ -1,5 +1,5 @@
 <?php
-$host = "http://127.0.0.1:5500/";
+$host = "127.0.0.1";
 $user = "root";
 $pass = "";
 $db = "weather_app";

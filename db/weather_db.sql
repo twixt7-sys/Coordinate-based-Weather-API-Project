@@ -3,7 +3,9 @@ USE weather_app;
 
 CREATE TABLE IF NOT EXISTS weather_data (
 	id INT AUTO_INCREMENT PRIMARY KEY,
-	city VARCHAR(255),
+	latitude FLOAT NOT NULL,
+	longitude FLOAT NOT NULL,
 	temperature VARCHAR(50),
+	windspeed VARCHAR(50),
 	saved_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
