@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Saved Weather</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		body {
+			background: linear-gradient(135deg, #1e3c72, #2a5298);
+			color: #fff;
+		}
+		.weather-card {
+			background-color: rgba(0, 0, 0, 0.6);
+			border: none;
+			border-radius: 1rem;
+			padding: 2rem;
+			box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+		}
+		.card-list {
+			max-height: 70vh;
+			overflow-y: auto;
+		}
+
+		.card-list::-webkit-scrollbar {
+			width: 6px; /* Thin scrollbar */
+		}
+
+		.card-list::-webkit-scrollbar-track {
+			background: transparent; /* no background on track */
+		}
+
+		.card-list::-webkit-scrollbar-thumb {
+			background-color: rgba(255, 255, 255, 0.3); /* subtle thumb */
+			border-radius: 3px;
+		}
+
+		.card-list::-webkit-scrollbar-thumb:hover {
+			background-color: rgba(255, 255, 255, 0.5); /* brighter on hover */
+		}
+
+		.card-list {
+			scrollbar-width: thin; /* thin scrollbar */
+			scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+		}
+	</style>
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100">
+
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-8">
+				<div class="weather-card">
+					<h1 class="text-center mb-4">📋 Saved Weather Records</h1>
+					<div id="weatherList" class="card-list">
+						<!-- Dynamic weather cards will go here -->
+					</div>
+					<div class="text-center mt-4">
+						<a href="/" class="btn btn-outline-light">Back to Dashboard</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="{{ url_for('static', filename='js/saved.js') }}"></script>
+</body>
+</html>
