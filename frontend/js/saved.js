@@ -1,4 +1,4 @@
-fetch('../backend/get_saved_weather.php')
+fetch('backend/get_saved_weather.php')
 	.then(res => res.json())
 	.then(data => {
 		const list = document.getElementById('weatherList');
