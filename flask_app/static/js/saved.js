@@ -21,7 +21,10 @@ document.addEventListener("DOMContentLoaded", async function () {
 					<p class="card-text" style="color: rgb(92, 188, 101);">🍃 Wind Speed: <strong>${record.windspeed} km/h</strong></p>
 					<p class="card-text" style="color: rgb(174, 174, 174);">📍 Lat: ${record.latitude}, Long: ${record.longitude}</p>
 					<hr>
+					<div class="d-flex justify-content-between align-items-center">
 					<small class="text" style="color: rgb(113, 182, 255);">Saved on: ${record.timestamp}</small>
+					<button class="btn btn-outline-danger mt-2" onclick="deleteWeather(${record.id})">Delete</button>
+					</div>
 				</div>
 			`;
 			weatherList.appendChild(card);
@@ -31,3 +34,18 @@ document.addEventListener("DOMContentLoaded", async function () {
 		weatherList.innerHTML = "<p class='text-center text-danger'>Error loading data.</p>";
 	}
 });
+
+async function deleteWeather(id) {
+	try {
+		const response = await axios.delete(`/api/saved-weather/${id}`);
+		if (response.status === 200) {
+			alert("Weather record deleted successfully!");
+			location.reload();
+		} else {
+			alert("Failed to delete the weather record.");
+		}
+	} catch (err) {
+		console.error("Error deleting weather record:", err);
+		alert("An error occurred while trying to delete the record.");
+	}
+}

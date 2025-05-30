@@ -53,6 +53,22 @@ def get_saved_weather():
 		print(f"Error retrieving saved weather: {e}")
 		return jsonify({"error": str(e)}), 500
 
+@app.route('/api/saved-weather/<int:record_id>', methods=['DELETE'])
+def delete_weather_by_id(record_id):
+	try:
+		conn = mysql.connector.connect(**db_config)
+		cursor = conn.cursor()
+		query = "DELETE FROM weather_data WHERE id = %s"
+		cursor.execute(query, (record_id,))
+		conn.commit()
+		cursor.close()
+		conn.close()
+
+		return jsonify({"message": "Data deleted successfully"}), 200
+
+	except Exception as e:
+		print(e)
+		return jsonify({"error": str(e)}), 500
 
 @app.route('/save-weather', methods=['POST'])
 def save_weather():
