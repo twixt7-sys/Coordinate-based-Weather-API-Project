@@ -85,7 +85,7 @@ IT111project/
 │   └── templates/
 │       ├── index.html
 │       ├── saved.html
-│       └── search.html
+│       └── about.html
 │
 ├── .gitattributes
 └── README.md
