@@ -34,34 +34,29 @@
 		<div class="row justify-content-center">
 			<div class="col-md-6">
 				<div class="weather-card text-center">
-					<h1 class="mb-4">🌦️ Weather Dashboard</h1>
-					<div class="mb-3">
-						<input type="text" class="form-control" id="latitude" placeholder="Enter Latitude">
-					</div>
-					<div class="mb-3">
-						<input type="text" class="form-control" id="longitude" placeholder="Enter Longitude">
-					</div>
-					<button class="btn btn-outline-light w-100" onclick="searchWeather()">Search</button>
+					<h1 class="mb-4">👤 About Us</h1>
+                    <hr>
+                    <p>
+                        Welcome to our Weather Search application!
+                        <br><br>
+                        Our team is dedicated to providing accurate and up-to-date weather information to help you plan your day with confidence. Built using Flask and Bootstrap, our project aims to deliver a simple, user-friendly experience for everyone. 
+                        <br><br>
+                        Whether you're looking for current weather conditions or saving your favorite locations, our application has you covered.
+                        <br><br>
+                        Thank you for choosing our service!
+                        <br><br>
 
-					<hr class="my-4 text-light">
-					<div>
-						<div id="temperature" class="fs-5 fw-semibold" style="color: rgb(241, 140, 184);">🌡️Temperature🌡️</div>
-						<div id="windspeed" class="fs-5 fw-semibold mt-2" style="color: rgb(92, 188, 101);">🍃Windspeed🍃</div>
-					</div>
-					<hr class="my-4 text-light">
-					<div>
-						<button class="btn btn-info w-100" onclick="saveWeather()">Save Weather</button>
-					</div>
+                        <div class="text-info">
+                        <h5>Project Team: </h5>
+                        Kencharviz Alao <br>
+                        Katrine Angelica Jimenez <br>
+                        Twixt Jasley Tamera
+                        </div>
+                        
+                    </p>
+                    <hr>
+					<a href="/" class="btn btn-outline-light">Back to Dashboard</a>
 				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="flex-column" class="container d-flex justify-content-center">
-		<div class="weather-card text-center">
-			<div class="d-flex justify-content-center gap-2">
-				<a href="saved" class="btn btn-info flex-fill">View Saved Weather</a>
-				<a href="about" class="btn btn-info flex-fill">About</a>
 			</div>
 		</div>
 	</div>
