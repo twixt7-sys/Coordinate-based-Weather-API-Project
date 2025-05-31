@@ -1,28 +1,14 @@
-# Weather Dashboard - Final Project
-
-## Overview
-A simple web application that uses Open-Meteo API to fetch current weather, stores it via PHP into MySQL, and displays saved data.
-
-## Tech Stack
-- HTML, CSS, JS (fetch API)
-- PHP for backend
-- MySQL for storage
-- Open-Meteo public API
-
-## Setup
-1. Import `sql/weather_db.sql` into MySQL.
-2. Set up a local PHP server (`xampp`, `laragon`, etc.).
-3. Access via `localhost/weather-dashboard/frontend/index.html`.
-
-## Team
-- Bloo + Partner Name
-
-## Screenshots
-*(add screenshots here)*
-
 # Weather Dashboard
 
 A simple web application to search, save, and view weather data using the [Open-Meteo API](https://open-meteo.com/), with data storage in MySQL and backend support in both PHP and Flask.
+
+---
+
+# Tech Stack
+
+- Frontend: HTML, CSS, JavaScript, Bootstrap
+- Backend: Flask
+- Database: MySQL
 
 ---
 
@@ -65,15 +51,7 @@ cd weather-dashboard
 
    This creates a `weather_app` database and a `weather_data` table.
 
-### 3. PHP Backend Setup
-
-1. Make sure you have [XAMPP](https://www.apachefriends.org/) or similar LAMP/WAMP stack installed.
-2. Place the project folder in your web root (e.g., `htdocs` for XAMPP).
-3. Start Apache and MySQL from your control panel.
-4. Access the classic frontend at:  
-   [http://localhost/IT111project/frontend/index.htm](http://localhost/IT111project/frontend/index.htm)
-
-### 4. Flask Backend Setup (Optional)
+### 4. Flask Backend Setup
 
 1. Install Python 3 and pip.
 2. Install dependencies:
@@ -164,3 +142,9 @@ IT111project/
 - Katrine Angelica Jimenez
 
 ---
+
+## 📷 Screenhots
+
+![alt text](screenshots/index.png)
+![alt text](screenshots/saved.png)
+![alt text](screenshots/about.png)
