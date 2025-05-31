@@ -87,19 +87,6 @@ IT111project/
 │       ├── saved.html
 │       └── search.html
 │
-├── frontend/
-│   ├── index.htm
-│   ├── saved.htm
-│   ├── search.htm
-│   ├── backend/
-│   │   ├── db.php
-│   │   ├── get_saved_weather.php
-│   │   ├── save_weather.php
-│   │   └── delete_weather.php
-│   ├── css/
-│   └── db/
-│       └── weather_db.sql
-│
 ├── .gitattributes
 └── README.md
 ```
