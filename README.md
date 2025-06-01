@@ -18,14 +18,14 @@ A simple web application to search, save, and view weather data using the [Open-
 - Save weather records to a database
 - View and delete saved weather records
 - Responsive, modern UI (Bootstrap)
-- Two backend implementations: PHP (for classic frontend) and Flask (for modern SPA)
+- Backend implementation: Flask (for modern SPA)
 
 ---
 
 ## 🛠️ Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript, Bootstrap, Axios
-- **Backend:** Python Flask (modern)
+- **Backend:** Python Flask
 - **Database:** MySQL
 - **API:** Open-Meteo public API
 
