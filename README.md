@@ -36,8 +36,8 @@ A simple web application to search, save, and view weather data using the [Open-
 ### 1. Clone the Repository
 
 ```sh
-git clone https://github.com/yourusername/weather-dashboard.git
-cd weather-dashboard
+git clone https://github.com/twixt7-sys/Coordinate-based-Weather-API-Project.git
+cd Coordinate-based-Weather-API-Project
 ```
 
 ### 2. Database Setup
