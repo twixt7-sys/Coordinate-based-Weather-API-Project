@@ -1,6 +1,6 @@
 # Weather Dashboard
 
-A simple web application to search, save, and view weather data using the [Open-Meteo API](https://open-meteo.com/), with data storage in MySQL and backend support in both PHP and Flask.
+A simple web application to search, save, and view weather data using the [Open-Meteo API](https://open-meteo.com/), with data storage in MySQL and backend support in Flask.
 
 ---
 
